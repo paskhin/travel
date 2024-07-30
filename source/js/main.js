@@ -1,6 +1,14 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initSwiper} from './modules/hero-swiper';
+import {initToursSwiper} from './modules/tours-swiper';
+import {initTraningSwiper} from './modules/traning-swiper';
+import {initReviewsSwiper} from './modules/reviews-swiper';
+import {initSwiperAdvantages} from './modules/advantages-swiper';
+import {initGallerySwiper} from './modules/gallery-swiper';
+import {videoPlay} from './modules/video';
+import {openMenu} from './modules/open-menu';
 
 // ---------------------------------
 
@@ -21,6 +29,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initSwiper();
+    initToursSwiper();
+    initTraningSwiper();
+    initReviewsSwiper();
+    initSwiperAdvantages();
+    initGallerySwiper();
+    videoPlay();
+    openMenu();
   });
 });
 

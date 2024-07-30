@@ -1,0 +1,254 @@
+.container--reviews {
+  padding-top: 30px;
+  padding-bottom: 0;
+
+  @include vp-1199 {
+    padding-top: 34px;
+    padding-bottom: 37px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    padding-top: 31px;
+    padding-bottom: 30px;
+  }
+}
+
+.reviews__title {
+  position: relative;
+  margin: 0;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+
+  @include vp-1199 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 31px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0;
+    margin-bottom: 3px;
+    padding-left: 1px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "Отзывы";
+    width: 241px;
+    overflow: hidden;
+    height: 55px;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 55px;
+    opacity: 0.03;
+    top: -17px;
+    left: 0;
+
+    @include vp-1199 {
+      font-size: 40px;
+      line-height: 40px;
+      top: -10px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
+      top: -4px;
+      height: 26px;
+    }
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+}
+
+.reviews__slider {
+  @include vp-767 {
+    max-width: 320px;
+    box-shadow: 0px 0px 20px 0px rgba(28, 51, 116, 0.10);
+    margin: 0 auto;
+  }
+}
+
+.reviews__wrapper-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 28px;
+
+  @include vp-1199 {
+    margin-bottom: 33px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 15px;
+    width: 91.4%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.reviews__button-wrapper {
+  display: flex;
+  width: 78px;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 12px;
+
+  @include vp-1199 {
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.reviews__button {
+  width: 37px;
+  height: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__list {
+  align-items: stretch;
+  margin: 0;
+  padding: 10px;
+  list-style-type: none;
+
+  @include vp-1199 {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.reviews__card {
+  width: 58.33%;
+  display: grid;
+  grid-template-columns: 40.4% auto;
+  gap: 30px;
+  padding: 20px 40px 20px 19px;
+  box-shadow: 0px 0px 20px 0px rgba(28, 51, 116, 0.10);
+  height: auto;
+  background-color: $color-default-white;
+
+  @include vp-1199 {
+    padding-right: 30px;
+    padding-left: 20px;
+    width: 565px;
+    grid-template-columns: 36.12% auto;
+    box-shadow: 0px 0px 30px 0px rgba(28, 51, 116, 0.10);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: none;
+  }
+}
+
+.card__image {
+  width: 100%;
+  height: 253px;
+
+  @include vp-1199 {
+    height: 237px;
+  }
+
+  @include vp-767 {
+    height: 169px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card__text {
+  @include vp-1199 {
+    padding-top: 5px;
+  }
+
+  @include vp-767 {
+    padding-top: 1px;
+  }
+}
+
+.card__text-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 11px;
+  margin-bottom: 2px;
+  margin-top: -2px;
+
+  @include vp-1199 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+    gap: 10px;
+  }
+}
+
+.card__text {
+  h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
+
+    @include vp-1199 {
+      margin-bottom: 6px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 8px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include vp-1199 {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    @include vp-767 {
+      padding-right: 10px;
+    }
+  }
+
+  span {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+    display: flex;
+  }
+}

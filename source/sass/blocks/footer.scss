@@ -1,0 +1,283 @@
+.container--footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-top: 1px solid rgba(45, 56, 63, 0.20);
+
+  @include vp-1199 {
+    padding: 34px 45px 20px 35px;
+  }
+
+  @include vp-767 {
+    padding: 23px 15px 20px 15px;
+  }
+}
+
+.footer__wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  @include vp-1199 {
+    gap: 34px;
+  }
+
+  @include vp-767 {
+    gap: 23px;
+  }
+}
+
+
+.footer__wrapper-nav {
+  display: flex;
+  align-items: center;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 23px;
+  }
+}
+
+.footer__logo {
+  padding: 9px 29px;
+  display: flex;
+
+  @include vp-1199 {
+    padding: 0;
+    padding-left: 10px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.footer-nav {
+  flex-grow: 1;
+}
+
+.footer-nav__list.site-list {
+  justify-content: center;
+
+  @include vp-1199 {
+    display: flex;
+    justify-content: end;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 40.54% 40.54%;
+    width: 296px;
+    justify-content: space-between;
+    grid-template-rows: 14px 14px 14px;
+    row-gap: 15px;
+    grid-template-areas: "tours rewievs"
+      "learning photo"
+      "about contacts";
+
+    .site-list__item--reviews {
+      grid-area: rewievs;
+    }
+
+    .site-list__item--photo {
+      grid-area: photo;
+    }
+
+    .site-list__item--contacts {
+      grid-area: contacts;
+    }
+
+    .site-list__item--learning {
+      grid-area: learning;
+    }
+
+    .site-list__item--about {
+      grid-area: about;
+    }
+
+    .site-list__item--tours {
+      grid-area: tours;
+    }
+  }
+}
+
+.site-list__item--tours {
+  @include vp-1199 {
+    a {
+      padding-right: 2px;
+    }
+  }
+}
+
+
+
+.site-list__item--footer {
+  margin: 0;
+}
+
+.site-list__link-footer {
+  position: relative;
+  color: $color-text-dark;
+  padding: 22px 15px;
+
+  &:hover {
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% - 20px);
+      height: 1px;
+      background-color: $color-text-dark;
+      top: 41px;
+      left: 10px;
+    }
+  }
+
+  &:focus {
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% - 20px);
+      height: 22px;
+      border: 1px solid $color-text-dark;
+      background-color: $color-transparent;
+      top: 20px;
+      left: 10px;
+    }
+  }
+
+  @include vp-1199 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    padding: 14px 0;
+    padding-right: 5px;
+    margin-left: 20px;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding: 0;
+    margin-left: 0;
+  }
+}
+
+.footer__link-phone {
+  padding-left: 55px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  display: flex;
+  min-width: 200px;
+
+  &:active {
+    color: $color-blue;
+  }
+
+  @include hover-focus {
+    color: $color-active;
+  }
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.footer__social-list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  align-self: center;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-1199 {
+    gap: 16px;
+    padding-left: 10px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+.footer__social-item {
+  display: flex;
+  width: 31.8px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(45, 56, 63, 0.20);
+
+  @include hover-focus {
+    border: 1px solid $color-text-dark;
+  }
+
+  &:active {
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    svg {
+      color: rgba(2, 102, 193, 0.10);
+    }
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer__social-item--vk {
+  a {
+    svg {
+      @include vp-1199 {
+        width: 16.98px;
+      }
+    }
+  }
+}
+
+.footer__social-item--odnoklassniki {
+  a {
+    svg {
+      @include vp-1199 {
+        width: 9.55px;
+      }
+    }
+  }
+}
+
+.footer__social-item--reddit {
+  a {
+    svg {
+      @include vp-1199 {
+        width: 14.86px;
+      }
+    }
+  }
+}
+
+.footer__doc {
+  display: block;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}

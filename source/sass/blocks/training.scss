@@ -1,0 +1,566 @@
+.training {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 620px;
+    height: 280px;
+    top: calc(100% - 110px);
+    right: 0;
+    background-image: url("../../img/about-clouds.png");
+    background-repeat: no-repeat;
+
+    @include vp-1199 {
+      width: 465px;
+      height: 280px;
+      top: calc(100% - 18px);
+      transform: translate(0, -100%);
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.training__container {
+  padding-top: 22px;
+  padding-bottom: 14px;
+  position: relative;
+
+  @include vp-1199 {
+    padding-top: 48px;
+    padding-bottom: 47px;
+  }
+
+  @include vp-767 {
+    padding-top: 23px;
+    padding-bottom: 20px;
+  }
+}
+
+.training__title {
+  position: relative;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  margin: 0;
+  margin-bottom: 32px;
+  display: flex;
+  height: 55px;
+  align-items: end;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 21px;
+    height: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+    height: 26px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "Обучение";
+    width: 100%;
+    overflow: hidden;
+    height: 55px;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 55px;
+    opacity: 0.03;
+    top: 3px;
+    left: 0;
+
+    @include vp-1199 {
+      top: 2px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include vp-767 {
+      top: 0;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}
+
+.instructors__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: 0;
+  margin-bottom: 32px;
+  padding-right: 78px;
+
+  @include vp-767 {
+    padding-right: 0;
+    display: flex;
+    width: max-content;
+  }
+}
+
+.training__text-wrapper {
+  margin-bottom: 60px;
+
+  @include vp-1199 {
+    margin-bottom: 29px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+  }
+
+  p {
+    display: block;
+    width: 820px;
+    margin: 0;
+
+    @include vp-1199 {
+      max-width: 560px;
+    }
+
+    @include vp-767 {
+      width: auto;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.instructors__slider {
+  margin-bottom: 58px;
+
+  @include vp-1199 {
+    margin-bottom: 27px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
+}
+
+.instructors__button {
+  width: 37px;
+  height: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructors__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.instructors__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @include vp-1199 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
+}
+
+.instructors__button-wrapper {
+  display: flex;
+  width: 78px;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.instructors__item {
+  padding: 14px 14px;
+  width: 23.75%;
+  min-height: 100%;
+  border: 1px solid rgba(2, 102, 193, 0.10);
+  height: auto;
+  background-color: $color-default-white;
+
+  @include vp-1199 {
+    width: 29.21%;
+  }
+
+  @include vp-767 {
+    width: 83px;
+  }
+}
+
+.instructor__image {
+  margin-bottom: 16px;
+  width: 100%;
+  height: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.instructor__name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  margin: 0;
+  margin-bottom: 14px;
+  padding-right: 110px;
+}
+
+.instructor__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  margin: 0;
+  padding: 7px 4px;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+
+  @include vp-1199 {
+    top: -1px;
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-text-dark;
+  }
+
+  &:active {
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    svg {
+      color: rgba(2, 102, 193, 0.10);
+    }
+  }
+}
+
+.instructor__text-wrapper {
+  position: relative;
+
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+  }
+}
+
+.learning__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: 0;
+  margin-bottom: 19px;
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 23px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+}
+
+
+.learning__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  margin-left: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 1px;
+    background-color: rgba(2, 102, 193, 0.2);
+    top: calc(100% - 3px);
+    left: 0;
+    z-index: 5;
+  }
+
+
+  @include vp-1199 {
+    display: grid;
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    width: 590px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 107px;
+    row-gap: 91px;
+    border: none;
+    padding-left: 10px;
+
+    grid-template-areas: "move training"
+      "let lecture";
+
+    .learning__item--move {
+      grid-area: move;
+    }
+
+    .learning__item--training {
+      grid-area: training;
+    }
+
+    .learning__item--let {
+      grid-area: let;
+    }
+
+    .learning__item--lecture {
+      grid-area: lecture;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 0;
+    row-gap: 25px;
+    width: auto;
+    grid-template-areas: "move" "training" "lecture" "let";
+    padding-left: 0;
+
+
+    &::before {
+      display: block;
+      height: calc(100% - 23px);
+      width: 1px;
+      background-color: rgba(2, 102, 193, 0.10);
+      opacity: 1;
+      top: 11.5px;
+      left: 6px;
+    }
+  }
+
+  .learning__item--move {
+    background-image: url("../../img/svg/learning1.svg");
+
+    @include vp-1199 {
+      background-size: 25px 25px;
+      background-position: 0 2px;
+    }
+
+    @include vp-767 {
+      background-size: 20.97px 19px;
+      background-position: 29.34px 7px;
+    }
+  }
+
+  .learning__item--training {
+    background-image: url("../../img/svg/learning2.svg");
+    background-position: left 12px;
+
+    @include vp-1199 {
+      background-size: 25px 20.07px;
+      background-position: 0px 4px;
+    }
+
+    @include vp-767 {
+      background-size: 20.97px 19px;
+      background-position: 29.34px 8px;
+    }
+  }
+
+  .learning__item--lecture {
+    background-image: url("../../img/svg/learning3.svg");
+
+    @include vp-1199 {
+      background-size: 23px 25px;
+      background-position: 1px 1px;
+    }
+
+    @include vp-767 {
+      background-size: 20.97px 21.38px;
+      background-position: 29.34px 5.87px;
+    }
+  }
+
+  .learning__item--let {
+    background-image: url("../../img/svg/learning4.svg");
+
+    @include vp-1199 {
+      background-size: 25px 27px;
+      background-position: 0px 1px;
+    }
+
+    @include vp-767 {
+      background-size: 20.97px 19px;
+      background-position: 29.34px 7px;
+    }
+  }
+}
+
+.learning__item {
+  position: relative;
+  padding: 8px 20px 11px 35px;
+  background-repeat: no-repeat;
+  background-position: left 10px;
+  width: 21.29%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: $color-blue;
+    border-radius: 50%;
+    top: calc(100% - 9px);
+    left: 0;
+
+    @include vp-767 {
+      width: 14.345px;
+      height: 13px;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 0;
+    padding-left: 35px;
+    background-position: left top;
+    width: auto;
+
+    //кружок низ
+    &:nth-child(4n-3),
+    &:nth-child(4n-2) {
+      &::before {
+        left: 0;
+        top: calc(100% + 10px);
+
+        @include vp-767 {
+          top: 11.5px;
+        }
+      }
+    }
+
+    //кружок верх
+    &:nth-child(4n-1),
+    &:nth-child(4n) {
+      &::before {
+        top: -27px;
+        left: 0;
+
+        @include vp-767 {
+          top: 11.5px;
+        }
+      }
+    }
+
+    //линия низ
+    &:nth-child(4n-3) {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 345px;
+        height: 1px;
+        background-color: rgba(2, 102, 193, 0.10);
+        // opacity: 0.2;
+        left: 10px;
+        top: calc(100% + 16px);
+
+        @include vp-767 {
+          display: none;
+        }
+      }
+    }
+
+    //линия верх
+    &:nth-child(4n) {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 345px;
+        height: 1px;
+        background-color: rgba(2, 102, 193, 0.10);
+        // opacity: 0.2;
+        left: 10px;
+        top: -20px;
+
+        @include vp-767 {
+          display: none;
+        }
+      }
+    }
+
+    //линия вертикаль
+    &:nth-child(4n-1) {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 56px;
+        background-color: rgba(2, 102, 193, 0.10);
+        // opacity: 0.2;
+        left: 6px;
+        top: -75px;
+
+        @include vp-767 {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(4n-3),
+    &:nth-child(4n-1) {
+
+      @include vp-767 {
+        grid-column: 1/2;
+      }
+    }
+
+    &:nth-child(4n-2),
+    &:nth-child(4n) {
+
+      @include vp-767 {
+        grid-column: 1/2;
+      }
+    }
+  }
+
+  @include vp-767 {
+    position: relative;
+    padding-left: 63.55px;
+    padding-right: 56px;
+    font-size: 12px;
+    line-height: 18px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+}
