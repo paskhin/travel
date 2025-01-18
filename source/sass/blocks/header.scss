@@ -1,7 +1,8 @@
 .header-wrapper {
   display: flex;
-  background-color: #0266C1;
-  max-width: 1200px;
+  background-color: #000000;
+  opacity: 80%;
+  // max-width: 1200px;
   padding: 32px 20px;
   align-items: center;
   justify-content: space-between;
@@ -429,6 +430,20 @@
   width: 100%;
   height: 100%;
   height: 800px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    height: 800px;
+    background-color: #000000;
+    opacity: 50%;
+
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
 
   @include vp-1199 {
     height: 942px;
@@ -462,6 +477,7 @@
   max-width: 1440px;
   left: 50%;
   transform: translate(-50%, 0);
+  z-index: 3;
 
   @include vp-1199 {
     grid-template-columns: 1fr;

@@ -2150,8 +2150,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #0266C1;
-  max-width: 1200px;
+  background-color: #000000;
+  opacity: 80%;
   padding: 32px 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2632,6 +2632,18 @@ button,
   height: 100%;
   height: 800px;
 }
+.hero__image-wrapper::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  height: 800px;
+  background-color: #000000;
+  opacity: 50%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 @media (max-width: 1199px) {
   .hero__image-wrapper {
     height: 942px;
@@ -2674,6 +2686,7 @@ button,
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+  z-index: 3;
 }
 @media (max-width: 1199px) {
   .hero__content {
